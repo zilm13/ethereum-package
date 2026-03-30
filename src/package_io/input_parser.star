@@ -1250,6 +1250,9 @@ def parse_network_params(plan, input_args):
         if cl_ipv6_enabled == None:
             cl_ipv6_enabled = result["ipv6_enabled"]
 
+        participant["el_ipv6_enabled"] = el_ipv6_enabled
+        participant["cl_ipv6_enabled"] = cl_ipv6_enabled
+
         actual_num_validators += participant["validator_count"]
 
         cl_extra_params = participant.get("cl_extra_params", [])
